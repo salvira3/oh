@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Open House Fasilkom UI 2017</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="ico/favicon.ico" />
+	<!--css-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/myowncss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <!--jquery first, then-->
+  <script src="js/jquery-3.2.1.min.js"></script>
+	<!--javascript-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+      // When the DOM is ready, run this function
+      $(document).ready(function() {
+        //Set the carousel options
+          $('#quotes').carousel({
+            pause: true,
+            interval: 4000,
+          });
+      });
+	(function ($) {
+		  $(document).ready(function(){
+		    
+			// hide .navbar first
+			$(".navbar").hide();
+			
+			// fade in .navbar
+			$(function () {
+				$(window).scroll(function () {
+		            // set distance user needs to scroll before we fadeIn navbar
+					if ($(this).scrollTop() > 750) {
+						$('.navbar').fadeIn();
+					} else {
+						$('.navbar').fadeOut();
+					}
+				});
+
+			
+			});
+
+		});
+		  }(jQuery));
+    $(document).ready(function(){
+  		// Add scrollspy to <body>
+  		$('body').scrollspy({target: ".navbar", offset: 50});   
+
+  		// Add smooth scrolling on all links inside the navbar
+  		$("#myNavbar a").on('click', function(event) {
+    	// Make sure this.hash has a value before overriding default behavior
+	    	if (this.hash !== "") {
+	      		// Prevent default anchor click behavior
+	      		event.preventDefault();
+
+	      		// Store hash
+	      		var hash = this.hash;
+
+	      		// Using jQuery's animate() method to add smooth page scroll
+	      		// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      		$('html, body').animate({
+	        		scrollTop: $(hash).offset().top
+	    			}, 800, function(){
+	   
+	     				// Add hash (#) to URL when done scrolling (default click behavior)
+	        			window.location.hash = hash;
+	      		});
+	   		}  // End if
+  		});
+	});
+  </script>
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Oct 14, 2017 08:30:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("timeline").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timeline").innerHTML = "It's the day!";
+  }
+}, 1000);
+  $(window).scroll(function() {
+	  $(".slideanim").each(function(){
+	    var pos = $(this).offset().top;
+
+	    var winTop = $(window).scrollTop();
+	    if (pos < winTop + 600) {
+	      $(this).addClass("slide");
+	    }
+	  });
+});
+</script>
+	
+</head>
+<body>
+
+	<nav class="navbar navbar-fixed-top navbar-default" id="nav">
+  		<div class="container-fluid">
+  			
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			     </button>
+
+    		</div>
+    		<div id="myNavbar" class="collapse navbar-collapse" style="padding-right: 10px;">
+    			<ul class="nav navbar-nav navbar-right" style="letter-spacing: 5px;">
+	      			<li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span></a></li>
+	      			<li><a href="#about">About</a></li>
+	      			<li><a href="#testi">Testimonial</a></li>
+	      			<li><a href="#teaserandactivity">Teaser</a></li>
+	      			<li><a href="#rsvp">Register</a></li>
+	    		</ul>
+    		</div>
+    		
+  		</div>
+	</nav>
+	<header class="header" id="top">
+		<div class="container">
+			<div class="text-center child">
+				<h1></h1>
+			</div>
+		</div>
+	</header>
+	<div id="home">
+		<div class="container-fluid bg-1" >
+		    <div class="row" style="margin-left: 50px; margin-right: 50px">
+		      <div class="col-sm-8 col-sm-offset-2">
+		        <img src="img/gd-03.png" class="slideanim" style="width: 100%; border: 15px solid #C3EEEB">
+		        <h1 class="thicker text-center" style="color: #FCE18C">Welcome to Fasilkom!</h1>
+		        <h4 class="text-center" style="color: #fff">Faculty of Computer Science Universitas Indonesia is one of the best Faculty in Indonesia that has a vision to maintain its position as an internationally acclaimed hub for research and education in the field of CS and IT in Indonesia. FASILKOM UI also strives to maintain its health and integrity as an organization, as well as to continue working towards Indonesia's advancement in these fields.</h4>
+
+		      </div>
+		    </div>
+	    <!--<img src="img/cloud-02.png" width="100%">-->
+	    	<div class="awan">
+	      		<div class="container"></div>
+	    	</div>
+	  	</div>
+	 </div>
+  
+  <div class="container" id="about">
+  	<div class="text-center">
+  		<h1 class="thicker text-center" style="color: #FAA1A8">Open House Fasilkom 2017</h1>
+        <h3 style="color: #8BCCCE"><em>#MakeITFun</em></h3>
+  	</div>
+  	<div class="row" style="padding-top: 15px; padding-bottom: 35px">
+  		<div class="col-sm-5 border-right slideanim">
+  			<div class="media" style="padding-bottom: 25px">
+  				<div class="media-left media-middle" style="padding-right:10px">
+   			 		<img src="img/calendar.png" class="media-object" style="width:50px">
+  				</div>
+ 				 	<div class="media-body" style="padding-top: 10px">
+    				<strong><h4>Sabtu, 14 Oktober 2017</h4></strong>
+  				</div>
+				</div>
+				<div class="media" style="padding-bottom: 25px">
+  					<div class="media-left media-middle" style="padding-right:10px">
+   			 			<img src="img/alarm.png" class="media-object" style="width:50px">
+  					</div>
+ 				 	<div class="media-body" style="padding-top: 10px">
+    					<strong><h4>08.30 - selesai</h4></strong>
+  					</div>
+				</div>
+				<div class="media" style="padding-bottom: 25px">
+  					<div class="media-left media-middle" style="padding-right:10px">
+   			 			<img src="img/pin.png" class="media-object" style="width:50px">
+  					</div>
+ 				 	<div class="media-body" style="padding-top: 10px">
+    					<strong><h4>Fakultas Ilmu Komputer UI, Depok, Jawa Barat</h4></strong>
+
+  					</div>
+				</div>
+  			</div>
+  			<div class="col-sm-7 slideanim"><h4>Open House Fasilkom 2017 is an annual event with a purpose to give publication for the Faculty of Computer Science. Through this event, seniors in high school will be able to know and get the idea of the university life in Fasilkom. Additionally, Open House participants will also get new knowledge about information technology work field, real product of information technology and non-academic activities in Fasilkom UI.</h4> </div>
+		    </div>
+		    <h3 class="thick text-center" style="color: #FAA1A8;">Fasilkom UI on Google Maps</h3>
+		    <div id="googleMap" style="width: 100%; height: 300px; border: 15px solid #C3EEEB "></div>
+  	</div>
+    <div id="testi">
+    	<div class="container-fluid bg-2">
+  			<div class="text-center">
+        		<h2 class="thicker text-center" style="color: #9C2029">What they said about OH Fasilkom?</h2>
+  			<div class="row">
+  				<div class="col-sm-8 col-sm-offset-2">
+  					<div class="carousel slide" data-ride="carousel" id="quotes">
+  						<!--indicators-->
+  						<ol class="carousel-indicators">
+  							<li data-target="#quotes" data-slide-to="0" class="active"></li>
+  							<li data-target="#quotes" data-slide-to="1"></li>
+  							<li data-target="#quotes" data-slide-to="2"></li>
+  						</ol>
+  						<div class="carousel-inner" role="listbox">
+  							<!--quotes 1-->
+  							<div class="item active">
+	  							<blockquote>
+	  								<div class="row">
+                      					<div class="col-sm-12">
+                       						 <div class="carousel-height">
+                         							 <p class="thick">Awalnya gua bingung harus milih S*EI atau Fasilkom. Makanya gua ikut OH, pas ikut OH gua sadar kalo gua lebih nyaman dengan lingkungan Fasilkom. Berhasil banget Open-Housenya.</p>
+                          					</div>
+                          
+                      					</div>
+                    				</div>
+	  							</blockquote>
+  							</div>
+		                <!--quotes 2-->
+		                <div class="item">
+		                  <blockquote>
+		                    <div class="row">
+		                      <div class="col-sm-12">
+		                        <div class="carousel-height">
+		                          <p class="thick">Asik kakk. Diluar ekspektasi gitu. Mikirnya bakalan bosen wkwk. Ternyata super asik. Bahagia dapet makan gratis. Terus dosennya gokil2. Fun codingnya beneran fun, jadi kayak bikin game gituu. Intinya oh fasilkom berhasil ngehasut aku buat masuk fasilkom wkwk.</p>
+		                        </div>
+		                        
+		                      </div>
+		                    </div>
+		                  </blockquote>
+		                </div>
+		                <!--quotes 3-->
+		                <div class="item">
+		                <blockquote>
+		                  <div class="row">
+		                    <div class="col-sm-12">
+		                      <div class="carousel-height">
+		                        <p class="thick">Setelah ikut OHF, gue menjadi lebih tau perbedaan TK sama IK. selain itu dari OHF juga meningkatkan motivasi untuk menjadi keluarga Fasilkom UI. OHF juga memberi gambaran apa yang akan di pelajari nanti di Fasilkom.</p>
+		                      </div>
+		                    </div>
+		                  </div>
+		                </blockquote>
+		                </div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  	</div>
+    </div>
+  	
+  	<div id="count">
+  		<div class="container-fluid bg-3">
+  			<div class="row">
+  				<div class="col-sm-4"></div>
+  				<div class="col-sm-8">
+  					
+		      		<div class="jumbotron text-center slideanim">
+		        		<h1 style="color: #dc7582" class="thicker text-center">Counting to the day....</h1>
+		        		<h1 id="timeline" class="thicker" style="color: #4d4d4d;"></h1>
+		     		</div>
+  				</div>
+  			</div>
+  			
+    	</div>
+
+    <div class="container-fluid" id="teaserandactivity">
+    	<h1 class="thicker text-center" style="color: #e56266">Sneak Peek</h1>
+    	<div class="row">
+    		<div class="col-sm-8 col-sm-offset-2">
+    			<div id="teaser" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#teaser" data-slide-to="0" class="active"></li>
+				    <li data-target="#teaser" data-slide-to="1"></li>
+				    <li data-target="#teaser" data-slide-to="2"></li>
+				    <li data-target="#teaser" data-slide-to="3"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="img/foto/pic-1.png" class="img-responsive">
+				    </div>
+
+				    <div class="item">
+				      <img src="img/foto/pic-2.png" class="img-responsive">
+				    </div>
+
+				    <div class="item">
+				      <img src="img/foto/pic-3.png" class="img-responsive">
+				    </div>
+
+				    <div class="item">
+				      <img src="img/foto/pic-4.png" class="img-responsive">
+				    </div>
+				  </div>
+
+				</div>
+    		</div>
+    	</div>
+    </div>
+    	
+    <div class="container-fluid bg-4 " id ="rsvp">
+      <div class="text-center slideanim">
+      	<h1 class="thicker text-center" style="color: #ba393b;">Ready to join Open House Fasilkom 2017?</h1>
+      	<h3><em>Click the button to register yourself!</em></h3>
+        <div style="padding-bottom: 20px; padding-top: 20px;"><h3><a class=" btn-join typeform-share button" href="https://rismanti.typeform.com/to/uw8o6X" data-mode="popup" target="_blank">Register now! </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+        </h3>
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <footer>
+    	<div id="footer">
+    		<h5 class="pull-left" style="padding-top: 5px;">© Copyright 2017, OH Fasilkom 2017</h5>
+    		<div class="pull-right">
+    			
+    			<ul class="list-inline">
+    				<li><a href="http://line.me/ti/p/~@WID1653L" ><img src="img/at-01.png" class="icon"></a></li>
+    				<li><a href="http://twitter.com/ohfasilkom"><img src="img/tw-01.png" class="icon"></a></li>
+    				<li><a href="http://instagram.com/ohfasilkom"><img src="img/ins-01.png" class="icon"></a></li>
+    			</ul>
+				
+				
+				
+    		</div>
+
+    		
+    	</div>
+    </footer>
+
+		
+  		<!-- Add Google Maps -->
+		<script>
+			function myMap() {
+				var myCenter = new google.maps.LatLng(-6.3646009,106.8286886);
+				var mapProp = {center:myCenter, zoom:17, scrollwheel:false, draggable:true, mapTypeId:google.maps.MapTypeId.ROADMAP};
+				var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+				var marker = new google.maps.Marker({position:myCenter});
+				marker.setMap(map);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRVAbV_8SbPceex6C14Hs8Mx6FfwOUT4I&callback=myMap"></script>
+
+</body>
+</html>
