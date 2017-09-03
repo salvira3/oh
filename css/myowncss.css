@@ -11,6 +11,26 @@
 		.jumbotron {
 			background: none;
 		}
+		/* Small devices (landscape phones, 544px and up) */
+		@media (min-width: 544px) {  
+		  .jumbotron h2 {font-size:3.5rem;} /*1rem = 16px*/
+		}
+		 
+		/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+		@media (min-width: 768px) {  
+		 .jumbotron h2 {font-size:3.5rem;} /*1rem = 16px*/
+		}
+		 
+		/* Large devices (desktops, 992px and up) */
+		@media (min-width: 992px) { 
+		.jumbotron  h2 {font-size:3.5rem;} /*1rem = 16px*/
+		}
+		 
+		/* Extra large devices (large desktops, 1200px and up) */
+		@media (min-width: 1200px) {  
+		 .jumbotron h2 {font-size:4.5rem;} /*1rem = 16px*/    
+		}
+
 
 		 .bg-1 {
 		 	background: #8BCCCE ;
@@ -24,10 +44,25 @@
 		 	}
 		 }
 		 .bg-3 {
-		 	background: url(../img/fw-03.png) no-repeat;
+		 	background: #c3eeeb url(../img/fw-03.png) no-repeat;
+		 }
+		 @media (max-width: 1005px) {
+		 	.bg-3 {
+		 		background: #c3eeeb url('../img/tend-03.png') no-repeat;
+		 	}
+		 }
+		 @media (max-width: 775px) {
+		 	.bg-3 {
+		 		background: #c3eeeb url('../img/balon-aja-03.png') no-repeat;
+		 	}
 		 }
 		 .bg-4 {
 		 	background: #FCE18C url(../img/tiket-06.png) no-repeat;
+		 }
+		 @media (min-width: 1293px) {
+		 	.bg-4 {
+		 		background: #FCE18C url(../img/tiket1-06.png) no-repeat;
+		 	}
 		 }
 		.container {
 			padding: 90px 100px 40px 100px;
@@ -173,6 +208,7 @@
 		  margin-left: 30px;
 		  margin-right: 30px;
 		  border: 10px solid #c3eeeb;
+		  padding: 0;
 		}
 
 		.item img {
@@ -192,7 +228,7 @@
 		/*carousel*/	
 		#quotes {
 			padding: 0 10px 30px 0px;
-			margin-top: 30px;
+			margin-top: 10px;
 			/*border-top: 4px solid #6B323B;
 			border-bottom: 4px solid #6B323B;*/
 			
@@ -202,13 +238,13 @@
 			
 		}
 		#quotes .carousel-indicators li{
-				background: white;
+				background: #8bccce;
 		}
 		#quotes .carousel-indicators li.active{
 				background: #9C2029;
 		}
 		/*end*/
-		.item {
+		#quotes .item {
 			padding-top: 10px;
 		}
 		.item blockquote {
