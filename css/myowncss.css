@@ -44,16 +44,16 @@
 		 	}
 		 }
 		 .bg-3 {
-		 	background: #c3eeeb url(../img/fw-03.png) no-repeat;
+		 	background: #dbf5f3 url(../img/fw-03.png) no-repeat;
 		 }
 		 @media (max-width: 1005px) {
 		 	.bg-3 {
-		 		background: #c3eeeb url('../img/tend-03.png') no-repeat;
+		 		background: #dbf5f3 url('../img/balon-aja-03.png') no-repeat;
 		 	}
 		 }
 		 @media (max-width: 775px) {
 		 	.bg-3 {
-		 		background: #c3eeeb url('../img/balon-aja-03.png') no-repeat;
+		 		background: #dbf5f3 url('../img/tend-03.png') no-repeat;
 		 	}
 		 }
 		 .bg-4 {
@@ -85,12 +85,12 @@
 		}
 		
 		.navbar {
-			background-color: #C3EEEB;
+			background-color: #dbf5f3;
 			border-bottom: none;
 			opacity: 0.9;
 		}
 		.navbar-nav li a:hover {
-      		color: #fff !important;
+      		color: #283b3b !important;
   		}
   		.navbar-nav li.active a {
       		color: #fff !important;
@@ -153,7 +153,7 @@
 			height:35px;
 		}
 		.header {
-			background: url('../img/bg-04.png') center center;
+			background: url('../img/bg-07.png') center center;
 			position: relative;
   			min-height: 100%;
   			-webkit-background-size: cover;
@@ -163,7 +163,7 @@
 		}
 		@media (max-width: 863px) {
 			.header {
-				background: url('../img/bg-01.png') center center;
+				background: url('../img/bg-08.png') center center;
 	  			min-height: 100%;
 	  			-webkit-background-size: cover;
 	  			-moz-background-size: cover;
@@ -207,7 +207,7 @@
 		#teaser {
 		  margin-left: 30px;
 		  margin-right: 30px;
-		  border: 10px solid #c3eeeb;
+		  border: 10px solid #dbf5f3;
 		  padding: 0;
 		}
 
@@ -289,7 +289,7 @@
 		}
 		@media (max-width: 350px) {
 			.carousel-height {
-				height: 270px;
+				height: 300px;
 			}
 		}
 		.btn-join {
@@ -358,5 +358,12 @@
 		        opacity: 1;
 		        -webkit-transform: translateY(0%);
 		    }
+		}
+
+		#googleMap .container-fluid {
+			padding-right:15px;
+			padding-left:15px;
+			margin-right:auto;
+			margin-left:auto
 		}
 		
